@@ -1,4 +1,8 @@
 # EX-16-LEFT-SHIFT-OPERATION
+
+## Name : Thanushree Vijayakanth
+## Register Number : 212224110054
+
 ## AIM
 To write a C Program to perform the basic left shift operation for 44 integer number with 3 shifts.
 
@@ -10,15 +14,22 @@ To write a C Program to perform the basic left shift operation for 44 integer nu
 5.	Stop the program.
 
 ## PROGRAM
+```
+#include <stdio.h>
+
+int main() 
+{
+    
+    int a = 44; 
+    int b = 3;   
+    int result = a << b;
+    printf("The result of left shifting %d by %d is: %d\n", a, b, result);
+    return 0;
+}
+```
 
 ## OUTPUT
-
-
-
-
-
-
-
+![image](https://github.com/user-attachments/assets/9439f835-7b4e-47fa-9c9c-1f6e8759ac46)
 
 
 ## RESULT
@@ -32,6 +43,8 @@ Thus the program to perform the basic left shift operation for 44 integer number
 
 
 # EX-17-TWO-NUMBERS-ARE-EQUAL-OR-NOT
+## Name : Thanushree Vijayakanth
+## Register Number : 212224110054
 
 
 ## AIM
@@ -47,9 +60,29 @@ Write a C Program to check whether the two numbers are equal or not using simple
 5.	Stop the program.
 
 ## PROGRAM
+```
+#include <stdio.h>
+
+int main() {
+    
+    int num1, num2;
+    scanf("%d%d", &num1,&num2);
+    if (num1 == num2) 
+    {
+        printf("Both numbers are equal.\n");
+    } 
+    else
+    {
+        printf("Both numbers are not equal.\n");
+    }
+    return 0;
+}
+```
 
 
 ## OUTPUT
+![image](https://github.com/user-attachments/assets/e12dbff5-b9e5-4daf-ba32-113d9cf88bcd)
+
            
 ## RESULT
 
@@ -59,6 +92,9 @@ Thus the program to check whether the two numbers are equal or not using simple 
 
 
 # EX-18-STRING-LOWERCASE-CONVERSION
+## Name : Thanushree Vijayakanth
+## Register Number : 212224110054
+
 ## AIM
 Write a C Program to convert the given string into lowercase.
 
@@ -70,8 +106,24 @@ Write a C Program to convert the given string into lowercase.
 5.	Stop the program.
 
 ## PROGRAM
+```
+#include <stdio.h>
+#include <ctype.h>  
+int main()
+{
+    char str[100];
+    fgets(str, sizeof(str), stdin);  
+    for (int i = 0; str[i] != '\0'; i++) 
+    {
+        str[i] = tolower(str[i]);
+    }
+    printf("The string in lowercase is: %s\n", str);
+    return 0;
+}
+```
 
 ## OUTPUT
+![image](https://github.com/user-attachments/assets/637190e5-c32d-4fcc-8251-99b4c5dd0158)
 
 
 
@@ -83,6 +135,10 @@ Thus the program to convert the given string into lowercase has been executed su
 
 
 # EX-19-COUNT-OF-WORDS-IN-A-STRING
+
+## Name : Thanushree Vijayakanth
+## Register Number : 212224110054
+
 ## AIM
 Write a C Program to count the total number of words in a given string using do While loop.
 
@@ -95,8 +151,37 @@ Write a C Program to count the total number of words in a given string using do 
 6.	Stop the program.
 
 ## PROGRAM
+```
+#include <stdio.h>
+
+int main() 
+{
+    char str[100];
+    int i = 0, count = 0;
+    printf("Enter a string: ");
+    fgets(str, sizeof(str), stdin);  
+    if (str[0] != '\0') 
+    {  
+        do {
+            if (str[i] == ' ') 
+            {
+                count++;
+            }
+            i++;
+        } 
+        while (str[i] != '\0');
+    }
+    if (i > 1 && str[i-2] != ' ') 
+    {
+        count++;
+    }
+    printf("Total number of words: %d\n", count);
+    return 0;
+}
+```
 
 ## OUTPUT
+![image](https://github.com/user-attachments/assets/a34fd40f-8496-4121-874c-6e9336857d45)
 
 
 
@@ -109,6 +194,10 @@ Thus the program to count the total number of words in a given string using do W
 
 
 # EX  -20 -COMPARING TWO STRINGS
+
+## Name : Thanushree Vijayakanth
+## Register Number : 212224110054
+
 ## AIM
 write a Program to compare two strings without using strcmp().
 ## ALGORITHM
@@ -129,9 +218,40 @@ Step 7: After the loop, check the value of flag:
 Step 8: End the program.
 
 ## PROGRAM
+```
+#include <stdio.h>
+int main() 
+{
+    char c1[100], c2[100];
+    int i = 0, flag = 0;
+    scanf("%[^\n]", c1);
+    scanf("%s", c2);
+    do 
+    {
+        if (c1[i] != c2[i]) 
+        {
+            flag = 1;
+            break; 
+        }
+        i++;
+    } 
+    while (c1[i] != '\0' || c2[i] != '\0'); 
+    if (flag == 0) 
+    {
+        printf("Strings are same.\n");
+    } 
+    else 
+    {
+        printf("Strings are not same.\n");
+    }
+    return 0;
+}
+```
 
 
 ## OUTPUT
+![image](https://github.com/user-attachments/assets/2b04c00b-0744-4bac-b80e-6721c6bf54c0)
+
  
 
 ## RESULT
